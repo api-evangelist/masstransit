@@ -1,0 +1,28 @@
+aid: masstransit
+name: MassTransit
+description: >-
+  MassTransit is a free, open source distributed application framework for .NET that provides messaging, sagas, and state machines.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Microservices
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/masstransit/refs/heads/main/apis.yml
+created: '2026-03-26'
+modified: '2026-03-26'
+specificationVersion: '0.19'
+apis:
+  - aid: masstransit:masstransit
+    name: MassTransit
+    description: >-
+      MassTransit is a free, open source distributed application framework for .NET that provides messaging, sagas, and state machines.
+    humanURL: https://github.com/api-evangelist/masstransit
+    tags:
+      - Microservices
+    properties: []
+common:
+  - type: Website
+    url: https://github.com/api-evangelist/masstransit
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
