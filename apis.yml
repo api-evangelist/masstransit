@@ -20,22 +20,27 @@ created: '2026-03-26'
 modified: '2026-03-26'
 specificationVersion: '0.19'
 apis:
-  - aid: masstransit:masstransit
-    name: MassTransit
+  - aid: masstransit:masstransit-messaging
+    name: MassTransit Messaging Framework
     description: >-
-      MassTransit is a free, open source distributed application framework
-      for .NET that provides a consistent abstraction on top of message
+      MassTransit provides a consistent abstraction on top of message
       transports like RabbitMQ, Azure Service Bus, and Amazon SQS, with
-      support for sagas, state machines, and routing slip activities.
+      support for sagas, state machines, routing slip activities, and
+      a standardized message envelope format.
     humanURL: https://masstransit.io/
     tags:
       - Messaging
       - .NET
-      - Open Source
       - Message Bus
       - Sagas
       - Event-Driven
-    properties: []
+    properties:
+      - type: Documentation
+        url: https://masstransit.io/documentation/concepts
+      - type: JSONSchema
+        url: json-schema/masstransit-message-envelope.json
+      - type: JSONSchema
+        url: json-schema/masstransit-saga-state.json
 common:
   - type: Website
     url: https://masstransit.io/

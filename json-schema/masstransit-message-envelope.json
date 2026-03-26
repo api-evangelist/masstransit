@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/masstransit/masstransit-message-envelope.json",
+  "title": "MassTransit Message Envelope",
+  "description": "Schema for the MassTransit message envelope format. All messages sent through MassTransit are wrapped in this envelope containing routing, correlation, and metadata information.",
+  "type": "object",
+  "properties": {
+    "messageId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the message"
+    },
+    "requestId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Request identifier for request/response conversations"
+    },
+    "correlationId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Correlation identifier for tracking related messages"
+    },
+    "conversationId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Conversation identifier (created on first message, propagated through chain)"
+    },
+    "initiatorId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The messageId of the message that initiated this message"
+    },
+    "sourceAddress": {
+      "type": "string",
+      "format": "uri",
+      "description": "The address of the endpoint that sent the message"
+    },
+    "destinationAddress": {
+      "type": "string",
+      "format": "uri",
+      "description": "The destination endpoint address"
+    },
+    "responseAddress": {
+      "type": "string",
+      "format": "uri",
+      "description": "The address for response messages"
+    },
+    "faultAddress": {
+      "type": "string",
+      "format": "uri",
+      "description": "The address for fault messages"
+    },
+    "messageType": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URN-formatted message type identifiers, e.g., urn:message:Namespace:MessageType"
+    },
+    "message": {
+      "type": "object",
+      "description": "The actual message payload"
+    },
+    "expirationTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time at which the message expires"
+    },
+    "sentTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when the message was sent"
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Custom headers as key-value pairs"
+    },
+    "host": {
+      "type": "object",
+      "description": "Information about the host that sent the message",
+      "properties": {
+        "machineName": {
+          "type": "string"
+        },
+        "processName": {
+          "type": "string"
+        },
+        "processId": {
+          "type": "integer"
+        },
+        "assembly": {
+          "type": "string"
+        },
+        "assemblyVersion": {
+          "type": "string"
+        },
+        "frameworkVersion": {
+          "type": "string"
+        },
+        "massTransitVersion": {
+          "type": "string"
+        },
+        "operatingSystemVersion": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["messageId", "messageType", "message"]
+}

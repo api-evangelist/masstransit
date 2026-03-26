@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/masstransit/masstransit-saga-state.json",
+  "title": "MassTransit Saga State",
+  "description": "Schema for MassTransit saga state machine instance data. Sagas coordinate long-running business processes across multiple services using a state machine pattern.",
+  "type": "object",
+  "properties": {
+    "correlationId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier that correlates all messages belonging to this saga instance"
+    },
+    "currentState": {
+      "type": "string",
+      "description": "The current state of the saga state machine (e.g., Initial, Processing, Completed, Faulted)"
+    },
+    "version": {
+      "type": "integer",
+      "description": "Optimistic concurrency version for the saga instance"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the saga instance was created"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last state transition"
+    },
+    "rowVersion": {
+      "type": "string",
+      "format": "byte",
+      "description": "Row version for database concurrency (Entity Framework)"
+    },
+    "expirationTokenId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Token ID for scheduled timeout events"
+    },
+    "faultedMessage": {
+      "type": "object",
+      "description": "The message that caused the saga to fault, if applicable",
+      "properties": {
+        "messageType": {
+          "type": "string"
+        },
+        "message": {
+          "type": "object"
+        },
+        "exceptionType": {
+          "type": "string"
+        },
+        "exceptionMessage": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["correlationId", "currentState"]
+}
