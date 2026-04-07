@@ -8,12 +8,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Messaging
   - .NET
-  - Open Source
-  - Message Bus
-  - Sagas
   - Event-Driven
+  - Message Bus
+  - Messaging
+  - Open Source
+  - Sagas
 url: >-
   https://raw.githubusercontent.com/api-evangelist/masstransit/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -29,11 +29,11 @@ apis:
       a standardized message envelope format.
     humanURL: https://masstransit.io/
     tags:
-      - Messaging
       - .NET
-      - Message Bus
-      - Sagas
       - Event-Driven
+      - Message Bus
+      - Messaging
+      - Sagas
     properties:
       - type: Documentation
         url: https://masstransit.io/documentation/concepts
