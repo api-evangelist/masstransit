@@ -46,7 +46,7 @@ common:
     url: https://masstransit.io/
   - type: Documentation
     url: https://masstransit.io/documentation/concepts
-  - type: Getting Started
+  - type: GettingStarted
     url: https://masstransit.io/quick-starts
   - type: GitHub
     url: https://github.com/MassTransit/MassTransit
