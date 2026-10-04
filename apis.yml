@@ -7,15 +7,20 @@ description: >-
   availability, reliability, and scalability.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: false
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: masstransit/masstransit
+    spdx: Apache-2.0
+    stars: 7803
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - none
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -36,7 +41,7 @@ tags:
   - Event-Driven
   - Message Bus
   - Messaging
-  - Open-Source
+  - Open Source
   - Sagas
 tags_raw:
   - .NET
@@ -45,6 +50,7 @@ tags_raw:
   - Messaging
   - Open Source
   - Sagas
+  - Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/masstransit/refs/heads/main/apis.yml
 created: '2026-03-26'
