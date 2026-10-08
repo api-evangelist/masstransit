@@ -79,6 +79,12 @@ apis:
       - type: JSONSchema
         url: json-schema/masstransit-saga-state.json
 common:
+  - type: Plans
+    url: plans/masstransit-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/masstransit-rate-limits.yml
+  - type: FinOps
+    url: finops/masstransit-finops.yml
   - type: DomainSecurity
     url: security/masstransit-domain-security.yml
   - type: Website
